@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../css/index.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <header class="box-shadow-out">
+        <a href="./index.html"><img src="../imgs/logo.png" alt="Logo" /></a>
+      </header>
+      <section class="contact">
+        <div class="animated-bunnies">
+          <img
+            class="left-bunny"
+            src="../imgs/zeka_desno.png"
+            alt="Blue nose Fluffy bunny"
+          />
+
+          <img
+            class="right-bunny"
+            src="../imgs/zeka_levo.png"
+            alt="Pink nose Fluffy Bunny"
+          />
+        </div>
+      </section>
+      <section class="contact-form box-layout">
+        <div id="contact">
+          <p>Nemam pojma sta da napisem ovde</p>
+          <form id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <p>
+              <label>Name</label>
+              <input type="text" name="user_name" />
+            </p>
+            <p>
+              <label>Email</label>
+              <input type="email" name="user_email" />
+            </p>
+            <p>
+              <label>Message</label>
+              <textarea name="message"></textarea>
+            </p>
+
+            <p>
+              <input type="submit" value="Send" />
+            </p>
+          </form>
+        </div>
+        <div id="responce">
+          <p>
+            Thanks for reaching out to us!
+            <br />
+            We wil conntact you back as soon as possible.
+          </p>
+        </div>
+      </section>
+      <section class="contact box-layout">
+        <address>
+          <a href="mailto:fluffybunny@gmail.com">fluffybunny@gmail.com</a><br />
+          <a href="tel:+13115552368">(311) 555-2368</a>
+        </address>
+      </section>
+      <section class="goback box-layout">
+        <div class="button">
+          <a href="index.html" class="btn">go Back</a>
+        </div>
+      </section>
+    </main>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_dXnw0wdAdI0EwpxJtJWnR");
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm("bufna", "bufnat", "contact-form").then(
+              function (response) {
+                document.getElementById("contact").style.display="none";
+                document.getElementById("responce").style.display="flex";
+
+          });
+      })
+    })();
+    </script>
+    <script src="../js/index.js" type="text/javascript"></script>
+  </body>
+</html>
