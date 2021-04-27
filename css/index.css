@@ -17,8 +17,8 @@
 }
 
 .box-shadow-out {
-  -webkit-box-shadow: 3px 3px 5px 6px var(--spanish-orange);
-  -moz-box-shadow: 3px 3px 5px 6px var(--spanish-orange);
+  -webkit-box-shadow: 3px 3px 5px 6px var(--dark-electric-blue-light);
+  -moz-box-shadow: 3px 3px 5px 6px var(--dark-electric-blue-light);
   box-shadow: 3px 3px 5px 6px var(--dark-electric-blue-light);
 }
 
@@ -29,7 +29,6 @@
 }
 
 .box-layout {
-  /* width: 90%; */
   margin: 5% 0 10% 0;
   padding: 0.5%;
   align-self: center;
@@ -92,23 +91,9 @@ main .main h2 {
   align-self: center;
   margin-top: 7%;
 }
-/* .bunnies .logo {
-  margin-top: -38px;
-} */
 
-/* .bunnies .left_bunny {
-  margin-bottom: -56%;
-  align-self: flex-start;
-  height: 300px;
-  transform: rotate(3deg) translate(-66px, 43px);
-}
-.bunnies .right_bunny {
-  height: 250px;
-  transform: rotate(-41deg) translate(108px, -18px);
-  align-self: flex-end;
-} */
-
-.animated-bunnies {
+.animated-bunnies,
+.animated-bunniess {
   display: flex;
   flex-flow: row;
 }
@@ -126,26 +111,25 @@ main .main h2 {
 .animated-bunnies .left-bunny,
 .animated-bunniess .left-bunny {
   height: 200px;
-  transform: rotate(41deg) translate(-39px, 320px);
+  /* transform: rotate(41deg) translate(-39px, 320px); */
+  transform: rotate(41deg) translate(-26%, 142%);
 }
 .animated-bunnies .right-bunny,
 .animated-bunniess .right-bunny {
   height: 200px;
-  transform: rotate(-41deg) translate(39px, 320px);
+  /* transform: rotate(-41deg) translate(39px, 320px); */
+  transform: rotate(-41deg) translate(26%, 142%);
 }
 @keyframes slide-in-left {
-  0% {
-  }
   100% {
-    transform: rotate(41deg) translate(-39px, 60px) scale(1.3);
+    /* transform: rotate(41deg) translate(-39px, 60px) scale(1.3); */
+    transform: rotate(41deg) translate(-26%, 26%) scale(1.3);
   }
 }
 @keyframes slide-in-right {
-  0% {
-    transform: rotate(-41deg) translate(39px, 320px);
-  }
   100% {
-    transform: rotate(-41deg) translate(39px, 60px) scale(1.7);
+    /* transform: rotate(-41deg) translate(39px, 60px) scale(1.7); */
+    transform: rotate(-41deg) translate(26%, 26%) scale(1.7);
   }
 }
 
@@ -270,8 +254,6 @@ address a {
   background-color: #e26a6a;
   box-shadow: 10px 10px 0 #f1c40f, 20px 20px 0 #3498db;
   position: absolute;
-  /* left: 0.25rem;
-  top: 0.5rem; */
   left: 0;
   top: 0;
   height: 102%;
@@ -288,157 +270,177 @@ address a {
   height: 100%;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-  /* navigation */
-  #menu a {
-    text-decoration: none;
-    color: var(--green);
-    text-shadow: 0.5px 0.5px 1px var(--body-bg-color);
-    transition: text-shadow 0.3s ease;
-  }
+/* navigation */
+#menu a {
+  text-decoration: none;
+  color: var(--green);
+  text-shadow: 0.5px 0.5px 1px var(--body-bg-color);
+  transition: text-shadow 0.3s ease;
+}
 
-  #menu a:hover {
-    text-shadow: 3px 3px 2px var(--body-bg-color);
-  }
+#menu a:hover {
+  text-shadow: 3px 3px 2px var(--body-bg-color);
+}
 
-  #menuToggle {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 30px;
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 
-    z-index: 1;
+  z-index: 1;
 
-    -webkit-user-select: none;
-    user-select: none;
-  }
+  -webkit-user-select: none;
+  user-select: none;
+}
 
-  #menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
 
-    -webkit-touch-callout: none;
-  }
+  -webkit-touch-callout: none;
+}
 
-  /*
+/*
  * Just a quick hamburger
  */
-  #menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
 
-    background: var(--dark-electric-blue);
-    border-radius: 3px;
+  background: var(--dark-electric-blue);
+  border-radius: 3px;
 
-    z-index: 1;
+  z-index: 1;
 
-    transform-origin: 4px 0px;
+  transform-origin: 4px 0px;
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  }
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
 
-  #menuToggle span:first-child {
-    transform-origin: 0% 0%;
-  }
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
 
-  #menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-  }
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
 
-  /* 
+/* 
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-  #menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-  }
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
 
-  /*
+/*
  * But let's hide the middle one.
  */
-  #menuToggle input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
 
-  /*
+/*
  * Ohyeah and the last one should go the other direction
  */
-  #menuToggle input:checked ~ span:nth-last-child(2) {
-    opacity: 1;
-    transform: rotate(-45deg) translate(0, -1px);
-  }
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
 
-  /*
+/*
  * Make this absolute positioned
  * at the top left of the screen
  */
-  #menu {
-    position: absolute;
-    width: 200px;
-    margin: -47px 80px 0 0;
-    padding: 50px;
-    padding-top: 125px;
-    right: -100px;
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -47px 80px 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
 
-    background: var(--dark-electric-blue);
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
+  background: var(--dark-electric-blue);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
 
-    transform-origin: 0% 0%;
-    transform: translate(111%, 0);
+  transform-origin: 0% 0%;
+  transform: translate(111%, 0);
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
 
-  #menu li {
-    padding: 10px 0;
-    font-size: 22px;
-  }
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
 
-  /*
+/*
  * And let's fade it in from the left
  */
-  #menuToggle input:checked ~ ul {
-    transform: none;
-    opacity: 1;
-  }
-  @media screen and (max-width: 1025px) {
-    #menu {
-      transform: none;
-      opacity: 0;
-
-      transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    }
-  }
-  /* Navigation END */
+#menuToggle input:checked ~ ul {
+  transform: none;
+  opacity: 1;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* main header {
-    margin: 5% 0 -8% 0;
+@media screen and (max-width: 1025px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-  .main .bunnies img {
-    max-height: 700px;
+}
+/* Navigation END */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1025px) {
+  /* Navigation */
+
+  #menuToggle {
+    top: 63px;
+    right: 43px;
   }
-  .main h2 {
-    font-size: 2.8em;
-  } */
+  #menuToggle span {
+    width: 47px;
+    height: 7px;
+  }
+  /* navigation END */
+  .animated-bunnies .left-bunny,
+  .animated-bunniess .left-bunny {
+    height: 400px;
+  }
+  .animated-bunnies .right-bunny,
+  .animated-bunniess .right-bunny {
+    height: 400px;
+  }
+
+  .button {
+    width: 100%;
+  }
+  .services p,
+  .contact p {
+    margin-top: 78px;
+  }
+  .contact-form {
+    width: 70%;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
