@@ -54,6 +54,7 @@ main {
 main header {
   display: flex;
   justify-content: start;
+  display: none;
 }
 main header a {
   padding: 5%;
@@ -194,9 +195,9 @@ main .main h2 {
   padding-right: 20px;
 }
 #contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="message"] {
+#contact-form input[type="email"] {
   border: none;
+  border-radius: 0%;
   border-bottom: 1px solid #888;
   background: transparent;
   width: 100%;
@@ -249,6 +250,7 @@ address a {
   font-style: normal;
   color: var(--green);
   font-weight: bold;
+  line-height: 1.5em;
 }
 .goback {
   width: 70%;
@@ -359,6 +361,8 @@ address a {
   transform-origin: 0% 100%;
 }
 
+
+
 /* 
  * Transform all the slices of hamburger
  * into a crossmark.
@@ -406,6 +410,10 @@ address a {
   transform: translate(111%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.closemenu {
+  width: 0px;
 }
 
 #menu li {

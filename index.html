@@ -26,7 +26,7 @@
         <h2>Making pretty websites</h2>
       </section>
 
-      <section class="services box-layout">
+      <section class="services box-layout" id="services">
         <div class="animated-bunnies">
           <img
             class="left-bunny"
@@ -51,7 +51,7 @@
         </ul>
       </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
         <img
           srcset="
             http://placeimg.com/640/360/any 320w,
@@ -92,14 +92,14 @@
     </main>
     <nav role="navigation">
       <div id="menuToggle">
-        <input type="checkbox" />
+        <input id="checkbox" type="checkbox"/>
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a  onclick="hideMenu()" href="#services">Services</a></li>
+          <li><a  onclick="hideMenu()" href="#projects">Projects</a></li>
+          <li><a  onclick="hideMenu()" href="./contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
