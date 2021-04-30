@@ -68,7 +68,7 @@ main .main {
   flex-flow: column nowrap;
   margin-top: 0px;
   width: 90%;
-  height: 80vh;
+  height: 84vh;
 }
 .bunnies {
   padding-top: 8%;
@@ -413,12 +413,12 @@ address a {
 }
 
 .closemenu {
-  width: 0px;
+  width: 0;
 }
 
 #menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 1.7em;
 }
 
 /*
@@ -449,6 +449,21 @@ address a {
     width: 47px;
     height: 7px;
   }
+ #menuToggle input:checked ~ span {
+transform: rotate(45deg) translate(11px, 7px);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(-10px, 13px);
+}
+
+
+#menu {
+width: 300px;
+text-align: center;
+}
+
   /* navigation END */
   .animated-bunnies .left-bunny,
   .animated-bunniess .left-bunny {
