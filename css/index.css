@@ -3,7 +3,7 @@
 }
 :root {
   --alice-blue: #e9f1f7ff;
-  --medium-spring-green: #40f99bff;
+  --medium-spring-green: rgba(64, 249, 156, 0.541);
   --dark-electric-blue: #61707dff;
   --dark-electric-blue-light: #61707d88;
   --pearly-purple: #9d69a3ff;
@@ -38,7 +38,7 @@ body {
   background: var(--gradient-radial), url(../imgs/texture.jpg);
   height: 100vh;
   display: flex;
-  color: var(--rich-black-fogra-39);
+  color: var(--button-color);
   font-family: var(--main-font);
   margin: 0;
 }
@@ -467,18 +467,8 @@ address a {
 }
 
 @media only screen and (min-width: 1025px) {
-  body {
-    background-color: var(--body-bg-color);
-    height: 100vh;
-    display: flex;
-  }
   main {
     flex: 3;
-  }
-  main header {
-    margin: 5% 0 -6% 0;
-    flex: 5;
-    margin: 1% 0 -6% 0;
   }
   .main {
     width: 100%;
@@ -488,19 +478,26 @@ address a {
     justify-content: space-around;
   }
   .main .bunnies img {
-    max-height: 600px;
+    max-height: 700px;
   }
-  .main h2 {
-    flex: 0.3;
-    font-size: 3.5em;
-    margin-top: 3%;
+  .bunnies .bunny {
+    top: -34%;
   }
-  .services ul {
-    margin-top: 1%;
+  .bunnies .logo {
+    top: 1%;
+    width: 68%;
   }
+  main .main h2 {
+    letter-spacing: 0.08em;
+    font-size: 3em;
+  }
+  .services p, .contact p {
+    line-height: 2.3em;
+}
   .services,
   .contact {
     font-size: 1.5em;
+    width: 100%;
   }
 
   nav {
@@ -512,7 +509,7 @@ address a {
     display: flex;
     position: unset;
     flex-direction: column;
-    height: 70%;
+    height: 100%;
   }
 
   #menuToggle input,
@@ -523,7 +520,6 @@ address a {
     display: flex;
     position: unset;
     flex-flow: column;
-    justify-content: space-around;
     transform: none;
     height: 100%;
     width: 100%;
@@ -533,25 +529,22 @@ address a {
     margin: 10% 0 0 0;
     padding: 0;
     background: none;
-    transition: background 0.2s linear;
+    transition: transform 0.2s ease-in;
   }
   #menu Li {
-    background: url(../imgs/zeka.png) no-repeat right/100px;
+   background: url(../imgs/navzeke.png) no-repeat bottom 0% left 50%;
+    height: 120px;
     display: flex;
-    flex: 1;
     justify-content: center;
-    align-items: center;
-    margin: 5% 0;
-    transition: background 0.2s linear;
+    align-items: end;
+    margin: 5% 5%;
+    transition: transform 0.2s ease-in;
   }
-  /* #menu:hover li {
-    background: url(../imgs/zeka.png) no-repeat top 3% right -8%,
-      var(--out-of-focus);
+  #menu:hover li {
+      transform: scale(0.7);
   }
 
   #menu li:hover {
-    background: url(../imgs/zeka.png) no-repeat top 30% right 5%,
-      var(--in-focus);
-  } */
-
+      transform: scale(1);
+  }
 }
