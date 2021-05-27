@@ -2,18 +2,31 @@
   box-sizing: border-box;
 }
 :root {
-  --alice-blue: #e9f1f7ff;
-  --medium-spring-green: rgba(64, 249, 156, 0.541);
-  --dark-electric-blue: #61707dff;
-  --dark-electric-blue-light: #61707d88;
-  --pearly-purple: #9d69a3ff;
-  --rich-black-fogra-39: #020202ff;
-  --button-color: #2c3e50;
+  --camel: rgb(98, 74, 38);
+  --carrot-orange: #ed9b40ff;
+  --antique-white: #ffeedbff;
+  --ocean-green: #61c9a8ff;
+  --french-raspberry: #ba3b46ff;
+  --eerie-black: #1d201fff;
+  --big-dip-oruby: #a63446ff;
+  --baby-powder: #fbfef9ff;
+  --orange-yellow-crayola: #fed766ff;
+  --blue-munsell: #009fb7ff;
+  --dim-gray: #696773ff;
+  --cultured: #eff1f3ff;
 
-  --gradient-radial: repeating-linear-gradient(to right, #e1e9eb96, #e9f1f794);
+  --bcgc: linear-gradient(0deg, #1d201fed, #1d201f, #1d201ff1);
 
-  --main-font: "Montserrat", sans-serif;
-  --h-font: "Montserrat Alternates", sans-serif;
+  --gradient-radial: repeating-linear-gradient(
+    90deg,
+    #fed766 0%,
+    #b7b6be 71%,
+    #f0f2f4 90%,
+    #fbfef9 100%
+  );
+
+  --main-font: "Alegreya Sans SC", sans-serif;
+  --h-font: "Alegreya Sans SC", sans-serif;
 }
 
 .box-shadow-out {
@@ -33,13 +46,38 @@
   padding: 0.5%;
   align-self: center;
 }
+.gradient-font {
+  text-transform: uppercase;
+  background: var(--gradient-radial);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+} */
+
+.hide-native-scrollbar {
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+.hide-native-scrollbar::-webkit-scrollbar {
+  /** WebKit */
+  display: none;
+  width: 0px;
+}
 
 body {
-  background: var(--gradient-radial), url(../imgs/texture.jpg);
+  background: var(--bcgc), url(../imgs/texture.jpg);
   height: 100vh;
   display: flex;
-  color: var(--button-color);
+  color: var(--orange-yellow-crayola);
   font-family: var(--main-font);
+  font-weight: 900;
   margin: 0;
 }
 main {
@@ -48,6 +86,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   overflow-x: hidden;
+  overflow-y: visible;
   text-align: center;
 }
 main .main {
@@ -58,10 +97,12 @@ main .main {
   height: 100vh;
 }
 .bunnies {
+  display: none;
   display: block;
-  height: 84vh;
+  /* height: 84vh; */
 }
 .bunnies .logo {
+  display: none;
   position: relative;
   top: 9%;
   width: 100%;
@@ -69,6 +110,7 @@ main .main {
   object-fit: contain;
 }
 .bunnies .bunny {
+  display: none;
   position: relative;
   top: -11%;
   left: 0%;
@@ -79,11 +121,16 @@ main .main {
   opacity: 0.4;
 }
 main .main h1 {
-  text-indent: -9000px;
-  font-size: 3em;
-  height: 0px;
+  /* text-indent: -9000px; */
+  font-size: 4em;
   margin: 0px;
-  flex: 1;
+  margin-top: 17%;
+  /* flex: 1; */
+  display: flex;
+  align-self: center;
+  color: var(--big-dip-oruby);
+  font-family: "Major Mono Display", monospace;
+  /* font-family: "Sedgwick Ave Display", cursive; */
 }
 main .main h2 {
   letter-spacing: 0.05em;
@@ -91,6 +138,8 @@ main .main h2 {
   font-weight: 900;
   margin-top: 0px;
   line-height: 1.3em;
+  display: flex;
+  align-self: center;
 }
 
 .animated-bunnies,
@@ -439,6 +488,9 @@ address a {
   main .main {
     margin-bottom: 290px;
   }
+  main .main h1 {
+    font-size: 10em;
+  }
   .bunnies .bunny {
     top: -26%;
   }
@@ -481,19 +533,23 @@ address a {
     max-height: 700px;
   }
   .bunnies .bunny {
-    top: -34%;
+    top: 13%;
   }
   .bunnies .logo {
     top: 1%;
     width: 68%;
   }
+  main .main h1 {
+    font-size: 10em;
+  }
   main .main h2 {
     letter-spacing: 0.08em;
     font-size: 3em;
   }
-  .services p, .contact p {
+  .services p,
+  .contact p {
     line-height: 2.3em;
-}
+  }
   .services,
   .contact {
     font-size: 1.5em;
@@ -532,7 +588,7 @@ address a {
     transition: transform 0.2s ease-in;
   }
   #menu Li {
-   background: url(../imgs/navzeke.png) no-repeat bottom 0% left 50%;
+    background: url(../imgs/navzeke.png) no-repeat bottom 0% left 50%;
     height: 120px;
     display: flex;
     justify-content: center;
@@ -541,10 +597,10 @@ address a {
     transition: transform 0.2s ease-in;
   }
   #menu:hover li {
-      transform: scale(0.7);
+    transform: scale(0.7);
   }
 
   #menu li:hover {
-      transform: scale(1);
+    transform: scale(1);
   }
 }

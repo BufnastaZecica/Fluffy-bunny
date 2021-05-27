@@ -8,20 +8,26 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sedgwick+Ave+Display&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <main>
+    <main class="hide-native-scrollbar">
       <section class="main box-layout">
+        <h1>
+          Fluffy<br />
+          Bunnies
+        </h1>
         <div class="bunnies">
           <img class="logo" src="./imgs/logo.png" alt="Logo" />
           <img class="bunny" src="./imgs/zeka.png" alt="Banny" />
-          
         </div>
-        <h1>Fluffy Bunnies</h1>
-        <h2>Making pretty websites</h2>
+        <h2 class="gradient-font">Making pretty websites</h2>
       </section>
 
       <section class="services box-layout" id="services">
@@ -38,7 +44,7 @@
             alt="Pink nose Fluffy Bunny"
           />
         </div>
-        <p class="intro box-shadow-out">What do we do?</p>
+        <p class="intro box-shadow-out gradient-font">What do we do?</p>
 
         <ul>
           <li>Websites</li>
@@ -77,7 +83,9 @@
             alt="Pink nose Fluffy Bunny"
           />
         </div>
-        <p class="box-shadow-out">Need one? <strong>Lets make it!</strong></p>
+        <p class="box-shadow-out gradient-font">
+          Need one? <strong>Lets make it!</strong>
+        </p>
         <address>
           <a href="mailto:fluffybunny@gmail.com">fluffybunny@gmail.com</a><br />
           <a href="tel:+13115552368">(311) 555-2368</a>
@@ -89,14 +97,14 @@
     </main>
     <nav role="navigation">
       <div id="menuToggle">
-        <input id="checkbox" type="checkbox"/>
+        <input id="checkbox" type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-          <li><a  onclick="hideMenu()" href="#services">Services</a></li>
-          <li><a  onclick="hideMenu()" href="#projects">Projects</a></li>
-          <li><a  onclick="hideMenu()" href="./contact.html">Contact</a></li>
+          <li><a onclick="hideMenu()" href="#services">Services</a></li>
+          <li><a onclick="hideMenu()" href="#projects">Projects</a></li>
+          <li><a onclick="hideMenu()" href="./contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
