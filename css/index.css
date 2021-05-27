@@ -123,9 +123,7 @@ main .main {
 main .main h1 {
   /* text-indent: -9000px; */
   font-size: 4em;
-  margin: 0px;
-  margin-top: 17%;
-  /* flex: 1; */
+  margin: 17% 0 7% 0;
   display: flex;
   align-self: center;
   color: var(--big-dip-oruby);
@@ -138,8 +136,6 @@ main .main h2 {
   font-weight: 900;
   margin-top: 0px;
   line-height: 1.3em;
-  display: flex;
-  align-self: center;
 }
 
 .animated-bunnies,
