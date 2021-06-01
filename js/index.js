@@ -14,8 +14,8 @@ const observer = new IntersectionObserver((entries) => {
     r_bunny.classList.remove("animated-right");
   });
 });
-const tracker = document.querySelector(".animated-bunnies");
-observer.observe(tracker);
+// const tracker = document.querySelector(".animated-bunnies");
+// observer.observe(tracker);
 
 const trackerr = document.querySelector(".animated-bunniess");
 observer.observe(trackerr);
