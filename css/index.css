@@ -1,38 +1,25 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
-  --camel: rgb(98, 74, 38);
-  --carrot-orange: #ed9b40ff;
-  --antique-white: #ffeedbff;
-  --ocean-green: #61c9a8ff;
-  --french-raspberry: #ba3b46ff;
-  --eerie-black: #1d201fff;
-  --big-dip-oruby: #a63446ff;
-  --baby-powder: #fbfef9ff;
-  --orange-yellow-crayola: #fed766ff;
-  --blue-munsell: #009fb7ff;
-  --dim-gray: #696773ff;
-  --cultured: #eff1f3ff;
-
-  --bcgc: linear-gradient(0deg, #1d201fed, #1d201f, #1d201ff1);
-
-  --gradient-radial: repeating-linear-gradient(
-    90deg,
-    #fed766 0%,
-    #b7b6be 71%,
-    #f0f2f4 90%,
-    #fbfef9 100%
-  );
-
+  --suzukired: #e20a17;
+  --blue: #003399;
+  --white: #f0f2f4;
+  --black: #19191a;
+  --bcgc: linear-gradient(0deg, #e20a17, #d40715, #b60612);
+  --gradient-radial: repeating-linear-gradient( 90deg, #fbfef9 0%, #b7b6be 71%, #f0f2f4 90%, #fbfef9 100%);
   --main-font: "Alegreya Sans SC", sans-serif;
   --h-font: "Alegreya Sans SC", sans-serif;
 }
 
+/* #fed766 0%, #b7b6be 71%, #f0f2f4 90%, #fbfef9 100%  */
+
 .box-shadow-out {
-  -webkit-box-shadow: 3px 3px 5px 6px var(--dark-electric-blue-light);
-  -moz-box-shadow: 3px 3px 5px 6px var(--dark-electric-blue-light);
-  box-shadow: 3px 3px 5px 6px var(--dark-electric-blue-light);
+  -webkit-box-shadow: 3px 3px 5px 6px var(--blue);
+  -moz-box-shadow: 3px 3px 5px 6px var(--blue);
+  box-shadow: 3px 3px 5px 6px #b7b6be;
+  width: 300px;
 }
 
 .box-shadow-in {
@@ -46,25 +33,21 @@
   padding: 0.5%;
   align-self: center;
 }
+
 .gradient-font {
   text-transform: uppercase;
   background: var(--gradient-radial);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* html {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 0px;
-} */
-
 .hide-native-scrollbar {
-  scrollbar-width: none; /* Firefox 64 */
-  -ms-overflow-style: none; /* Internet Explorer 11 */
+  scrollbar-width: none;
+  /* Firefox 64 */
+  -ms-overflow-style: none;
+  /* Internet Explorer 11 */
 }
+
 .hide-native-scrollbar::-webkit-scrollbar {
   /** WebKit */
   display: none;
@@ -72,23 +55,21 @@
 }
 
 body {
-  background: var(--bcgc), url(../imgs/texture.jpg);
-  height: 100vh;
+  background: var(--bcgc);
   display: flex;
-  color: var(--orange-yellow-crayola);
   font-family: var(--main-font);
   font-weight: 900;
   margin: 0;
 }
+
 main {
   width: 100%;
-  margin: var(--box-margin);
   display: flex;
   flex-flow: column nowrap;
   overflow-x: hidden;
-  overflow-y: visible;
   text-align: center;
 }
+
 main .main {
   display: flex;
   flex-flow: column nowrap;
@@ -96,6 +77,7 @@ main .main {
   width: 90%;
   height: 100vh;
 }
+
 main .main h1 {
   /* text-indent: -9000px; */
   /* font-size: 6em;
@@ -108,22 +90,22 @@ main .main h1 {
   font-family: "Major Mono Display", monospace;
   /* font-family: "Sedgwick Ave Display", cursive; */
 }
+
 main .main h2 {
   letter-spacing: 0.05em;
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: 900;
-  margin: -20px 0;
-  line-height: 1.3em;
-}  
-
-
+  line-height: 1.1em;
+}
 
 .walking-bunny {
   background: url(../imgs/walk_mob.png) 0 0px no-repeat;
   /* animation: bunnyWalk 1.5s steps(2) infinite; */
   width: 300px;
   height: 203px;
+  margin-top: 14%;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .animated-bunny {
     animation: bunnyWalk 1.5s steps(2) infinite;
@@ -139,65 +121,67 @@ main .main h2 {
   }
 }
 
-
-
-.animated-bunnies,
-.animated-bunniess {
+.animated-bunnies, .animated-bunniess {
   display: flex;
   flex-flow: row;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .animated-left {
     animation: slide-in-left 0.5s linear 0.1s 1 forwards;
   }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .animated-right {
     animation: slide-in-right 0.5s linear 0.1s 1 forwards;
   }
 }
 
-.animated-bunnies .left-bunny,
-.animated-bunniess .left-bunny {
+.animated-bunnies .left-bunny, .animated-bunniess .left-bunny {
   height: 200px;
   transform: rotate(41deg) translate(-26%, 142%);
 }
-.animated-bunnies .right-bunny,
-.animated-bunniess .right-bunny {
+
+.animated-bunnies .right-bunny, .animated-bunniess .right-bunny {
   height: 200px;
   transform: rotate(-41deg) translate(26%, 142%);
 }
+
 @keyframes slide-in-left {
   100% {
     transform: rotate(41deg) translate(-26%, 26%) scale(1.3);
   }
 }
+
 @keyframes slide-in-right {
   100% {
     transform: rotate(-41deg) translate(26%, 26%) scale(1.7);
   }
 }
 
-.services,
-.contact {
+.services, .contact {
   align-items: center;
-
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-
   font-size: 1.25em;
+  width: 100%;
 }
-.services p,
-.contact p {
-  font-family: var(--font);
+
+.services h2, .contact h2 {
   font-weight: bolder;
-  font-size: 2em;
-  color: var(--green);
+  font-size: 2.3em;
+  color: var(--white);
+  width: 100%;
+  background-color: var(--black);
 }
-.services p {
-  line-height: 2.3em;
+
+.services h2 {
+  font-size: 3em;
+  margin: 0 0 15% 0;
 }
+
 .services ul {
   list-style: none;
   padding: 0;
@@ -206,39 +190,44 @@ main .main h2 {
   color: var(--green);
   margin-top: -3%;
 }
+
 .projects {
   margin-bottom: 10%;
 }
+
 #contact-form {
   display: flex;
   flex-flow: column;
   align-items: top;
 }
+
 #contact-form label {
   min-width: 86px;
   padding-right: 20px;
 }
-#contact-form input[type="text"],
-#contact-form input[type="email"] {
+
+#contact-form input[type="text"], #contact-form input[type="email"] {
   border: none;
   border-radius: 0%;
   border-bottom: 1px solid #888;
   background: transparent;
   width: 100%;
 }
+
 .contact-form {
   background-color: #eee;
   align-self: center;
   margin-top: 9%;
 }
-.contact-form div > p {
-  background-color: var(--button-color);
+
+.contact-form div>p {
   color: white;
   text-transform: uppercase;
   padding: 10px 20px;
   margin: 0;
   line-height: 2em;
 }
+
 #contact-form p {
   padding-left: 20px;
   padding-right: 20px;
@@ -250,25 +239,29 @@ main .main h2 {
   border: none;
   width: 100%;
 }
+
 #contact-form p:last-of-type {
   padding: 10px 20px 20px 0;
   text-align: right;
   align-self: flex-end;
 }
+
 #contact-form input[type="submit"] {
-  background-color: var(--button-color);
   color: white;
   padding: 10px 30px;
   letter-spacing: 4px;
   font-weight: normal;
   text-transform: uppercase;
 }
+
 #responce {
   display: none;
 }
+
 address {
   margin: 5%;
 }
+
 address a {
   text-decoration: none;
   font-style: normal;
@@ -276,214 +269,27 @@ address a {
   font-weight: bold;
   line-height: 1.5em;
 }
+
+button {
+  background-color: var(--black);
+  width: 70%;
+  margin-top: 38px;
+}
+
+button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 2em;
+  line-height: 3em;
+  font-family: var(--main-font);
+}
+
 .goback {
   width: 70%;
 }
-.button {
-  margin-bottom: 10%;
-}
-.btn {
-  border: 5px solid #2c3e50;
-  color: #2c3e50;
-  display: block;
-  font-family: "trebuchet ms";
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-  padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.btn::before {
-  content: "";
-  background-color: #e26a6a;
-  box-shadow: 10px 10px 0 #f1c40f, 20px 20px 0 #3498db;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 102%;
-  width: 102%;
-  z-index: -1;
-  transition: all 0.4s ease;
-}
-
-.btn:hover::before {
-  box-shadow: none;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* navigation */
-#menu a {
-  text-decoration: none;
-  color: var(--green);
-  text-shadow: 0.5px 0.5px 1px var(--body-bg-color);
-  transition: text-shadow 0.3s ease;
-}
-
-#menu a:hover {
-  text-shadow: 3px 3px 2px var(--body-bg-color);
-}
-
-#menuToggle {
-  display: block;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: var(--dark-electric-blue);
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  opacity: 1;
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
-  position: absolute;
-  width: 200px;
-  margin: -47px 80px 0 0;
-  padding: 50px;
-  padding-top: 125px;
-  right: -100px;
-
-  background: var(--dark-electric-blue);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(111%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-.closemenu {
-  width: 0;
-}
-
-#menu li {
-  padding: 10px 0;
-  font-size: 1.7em;
-}
-
-/*
- * And let's fade it in from the left
- */
-#menuToggle input:checked ~ ul {
-  transform: none;
-  opacity: 1;
-}
-@media screen and (max-width: 1025px) {
-  #menu {
-    transform: none;
-    opacity: 0;
-
-    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-}
-/* Navigation END */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1025px) {
-  /* Navigation */
-  #menuToggle {
-    top: 63px;
-    right: 43px;
-  }
-  #menuToggle span {
-    width: 47px;
-    height: 7px;
-  }
-  #menuToggle input:checked ~ span {
-    transform: rotate(45deg) translate(11px, 7px);
-  }
-
-  #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(-10px, 13px);
-  }
-
-  #menu {
-    width: 300px;
-    text-align: center;
-  }
-  /* navigation END */
-
   main .main h1 {
     font-size: 8em;
     margin: 10% 0 7% 0;
@@ -504,21 +310,13 @@ address a {
       background-position: 0 -949px;
     }
   }
-
-  .animated-bunnies .left-bunny,
-  .animated-bunniess .left-bunny {
+  .animated-bunnies .left-bunny, .animated-bunniess .left-bunny {
     height: 400px;
   }
-  .animated-bunnies .right-bunny,
-  .animated-bunniess .right-bunny {
+  .animated-bunnies .right-bunny, .animated-bunniess .right-bunny {
     height: 400px;
   }
-
-  .button {
-    width: 100%;
-  }
-  .services p,
-  .contact p {
+  .services h2, .contact h2 {
     margin-top: 78px;
     font-size: 2.6em;
   }
@@ -549,10 +347,8 @@ address a {
     letter-spacing: 0.08em;
     font-size: 3em;
   }
-
   .walking-bunny {
     background: url(../imgs/walk_wscr.png) 0 0px no-repeat;
-  
     width: 700px;
     height: 474px;
   }
@@ -564,16 +360,13 @@ address a {
       background-position: 0 -949px;
     }
   }
-  .services p,
-  .contact p {
+  .services h2, .contact h2 {
     line-height: 2.3em;
   }
-  .services,
-  .contact {
+  .services, .contact {
     font-size: 1.5em;
     width: 100%;
   }
-
   nav {
     display: flex;
     flex: 1;
@@ -585,9 +378,7 @@ address a {
     flex-direction: column;
     height: 100%;
   }
-
-  #menuToggle input,
-  #menuToggle span {
+  #menuToggle input, #menuToggle span {
     display: none;
   }
   #menu {
@@ -617,7 +408,6 @@ address a {
   #menu:hover li {
     transform: scale(0.7);
   }
-
   #menu li:hover {
     transform: scale(1);
   }
