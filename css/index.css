@@ -68,6 +68,7 @@ main {
   flex-flow: column nowrap;
   overflow-x: hidden;
   text-align: center;
+  align-items: center;
 }
 
 main .main {
@@ -195,10 +196,17 @@ main .main h2 {
   margin-bottom: 10%;
 }
 
+#contact {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+}
+
 #contact-form {
   display: flex;
   flex-flow: column;
   align-items: top;
+  color: var(--white);
 }
 
 #contact-form label {
@@ -211,17 +219,16 @@ main .main h2 {
   border-radius: 0%;
   border-bottom: 1px solid #888;
   background: transparent;
+  color: var(--white);
   width: 100%;
 }
 
 .contact-form {
-  background-color: #eee;
-  align-self: center;
+   align-self: center;
   margin-top: 9%;
 }
 
 .contact-form div>p {
-  color: white;
   text-transform: uppercase;
   padding: 10px 20px;
   margin: 0;
@@ -235,8 +242,9 @@ main .main h2 {
 }
 
 #contact-form textarea {
-  background-color: #ddd;
-  border: none;
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  color: var(--white);
   width: 100%;
 }
 
@@ -247,10 +255,13 @@ main .main h2 {
 }
 
 #contact-form input[type="submit"] {
-  color: white;
+  color: var(--white);
+  background-color: var(--black);
   padding: 10px 30px;
+  font-size: 1em;
   letter-spacing: 4px;
-  font-weight: normal;
+  font-family: var(--main-font);
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -283,10 +294,6 @@ button a {
   font-size: 2em;
   line-height: 3em;
   font-family: var(--main-font);
-}
-
-.goback {
-  width: 70%;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1025px) {
