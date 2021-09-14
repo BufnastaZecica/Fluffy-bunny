@@ -80,13 +80,22 @@ main .main {
   /* height: 100vh; */
 }
 
+main .main>div {
+  display: flex;
+  flex-flow: column;
+}
+
 main .main h1 {
-  font-size: 4em;
+  font-size: 4.5em;
+  line-height: 1em;
   margin: 17% 0 7% 0;
   display: flex;
   align-self: center;
   color: var(--big-dip-oruby);
-  font-family: "Major Mono Display", monospace;
+  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Rampart One', cursive;
+  /* font-family: "Major Mono Display", monospace; */
   /* font-family: "Sedgwick Ave Display", cursive; */
 }
 
@@ -197,8 +206,27 @@ main .main h2 {
 }
 
 .projects {
-  margin-bottom: 10%;
-  display: none;
+  padding: 12% 0 8% 0;
+}
+
+.projects .basina, .projects .chartbehavior {
+  display: flex;
+  margin-bottom: 20%;
+}
+
+.projects img {
+  width: 140px;
+  padding: 2px;
+  filter: drop-shadow(0 0 0.75rem var(--black));
+}
+
+.projects div img:first-child {
+  transform: rotate(-9deg) translateX(10%);
+}
+
+.projects div img:nth-child(2) {
+  transform: rotate(9deg) translateX(-10%);
+  z-index: 2;
 }
 
 #contact {
@@ -295,6 +323,8 @@ main .main h2 {
 
 #responce {
   display: none;
+  justify-content: center;
+  margin-top: 7%;
 }
 
 address {
@@ -355,7 +385,12 @@ button a {
   }
   .services h2, .contact h2 {
     margin-top: 78px;
-    font-size: 2.6em;
+    font-size: 4em;
+    line-height: 0.8em;
+    padding: 3% 0;
+  }
+  .projects img {
+    width: 230px;
   }
   .services ul {
     font-size: 2.3em;
@@ -374,20 +409,25 @@ button a {
   main {
     flex: 3;
   }
-  .main {
+  main .main {
     width: 100%;
   }
   main .main h1 {
     font-size: 10em;
+    margin: 2%;
   }
   main .main h2 {
     letter-spacing: 0.08em;
-    font-size: 3em;
+    font-size: 2.5em;
+  }
+  .walk-bunny-container {
+    margin: 0;
   }
   .walking-bunny {
     background: url(../imgs/walk_wscr.png) 0 0px no-repeat;
     width: 700px;
     height: 474px;
+    margin: 0;
   }
   @keyframes bunnyWalk {
     0% {
@@ -397,58 +437,44 @@ button a {
       background-position: 0 -949px;
     }
   }
-  .services h2, .contact h2 {
+  .services h2 {
     line-height: 2.3em;
+    margin-bottom: 10%;
+  }
+  .contact h2 {
+    font-size: 3em;
+    line-height: 2.3em;
+  }
+  .contact h2>br {
+    display: none;
   }
   .services, .contact {
     font-size: 1.5em;
     width: 100%;
   }
-  .contact-form {
-    width: 50%;
+  .services {
+    margin-bottom: 2%;
   }
-  nav {
+  .projects {
     display: flex;
-    flex: 1;
-    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 70%;
+    padding: unset;
   }
-  #menuToggle {
-    display: flex;
-    position: unset;
-    flex-direction: column;
-    height: 100%;
+  .projects .basina, .projects .chartbehavior {
+    margin-bottom: unset;
   }
-  #menuToggle input, #menuToggle span {
+  .projects img {
+    width: 40%;
+  }
+  .contact {
+    margin-bottom: 5%;
+  }
+  .contact .animated-bunnies {
     display: none;
   }
-  #menu {
-    display: flex;
-    position: unset;
-    flex-flow: column;
-    transform: none;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    font-size: 1.7em;
-    flex: 1;
-    margin: 10% 0 0 0;
-    padding: 0;
-    background: none;
-    transition: transform 0.2s ease-in;
-  }
-  #menu Li {
-    background: url(../imgs/navzeke.png) no-repeat bottom 0% left 50%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin: 5% 5%;
-    transition: transform 0.2s ease-in;
-  }
-  #menu:hover li {
-    transform: scale(0.7);
-  }
-  #menu li:hover {
-    transform: scale(1);
+  .contact-form {
+    margin-top: 5%;
+    width: 50%;
   }
 }

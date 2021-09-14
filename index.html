@@ -11,45 +11,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sedgwick+Ave+Display&display=swap"
     rel="stylesheet" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Orbitron:wght@900&family=Rampart+One&display=swap"
+    rel="stylesheet">
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
 
 <body>
   <main class="hide-native-scrollbar">
     <section class="main box-layout">
-      <h1>
-        Fluffy<br />
-        Bunnies
-      </h1>
-      <h2 class="gradient-font">Making pretty websites and <br> Crafting custom software solutions</h2>
+      <div>
+        <h1>
+          Fluffy<br />
+          Bunnies
+        </h1>
+        <h2 class="gradient-font">Making pretty websites and <br> Crafting custom software solutions</h2>
+      </div>
       <div class="walk-bunny-container box-layout">
         <div class="walking-bunny">
         </div>
       </div>
     </section>
-
     <section class="services box-layout" id="services">
-
-
       <h2>Services</h2>
-
       <ul>
         <li>Websites</li>
-
         <li>Aplications</li>
-
         <li>Web Presentations</li>
       </ul>
     </section>
-
-    <section class="projects" id="projects">
-      <img srcset="
-            http://placeimg.com/640/360/any 320w,
-            http://placeimg.com/640/360/any 800w
-          " sizes="(max-width: 320px) 300px,
-            (max-width: 600px) 400px,
-            (max-width: 1024px) 800px,
-            1100px" src="http://placeimg.com/640/360/any" alt="Images of projects landing pages" />
+    <section class="projects box-layout" id="projects">
+      <div class="basina">
+        <a href="https://basina.surge.sh/" target="_blanck">
+          <img src="./imgs/basina1.PNG" alt="Websites landing page">
+          <img src="./imgs/basina2.PNG" alt="Websites page">
+        </a>
+      </div>
+      <div class="chartbehavior">
+      <a href="https://chartbehavior.com/app" target="_blanck">
+        <img src="./imgs/cb1.PNG" alt="Websites landing page">
+        <img src="./imgs/cb2.PNG" alt="Websites page">
+      </a>  
+      </div>
     </section>
 
     <section class="contact box-layout">
@@ -60,13 +68,6 @@
       <h2>
         Need one? <br> Lets make it!
       </h2>
-      <!-- <address>
-        <a href="mailto:fluffybunny@gmail.com">fluffybunny@gmail.com</a><br />
-        <a href="tel:+13115552368">(311) 555-2368</a>
-      </address> -->
-      <!-- <button type="button">
-        <a href="contact.html">Send Message</a>
-      </button> -->
     </section>
     <section class="contact-form box-layout">
       <div id="contact">
@@ -85,7 +86,7 @@
             <label>Message</label>
             <textarea name="message" required></textarea>
           </p>
-    
+
           <p>
             <input type="submit" value="Send" />
           </p>
@@ -104,9 +105,6 @@
         <a href="mailto:fluffybunny@gmail.com">fluffybunny@gmail.com</a><br />
         <a href="tel:+13115552368">(311) 555-2368</a>
       </address>
-      <!-- <button type="button">
-        <a href="index.html">Go Back</a>
-      </button> -->
     </section>
   </main>
 
@@ -121,7 +119,6 @@
             function (response) {
               document.getElementById("contact").style.display = "none";
               document.getElementById("responce").style.display = "flex";
-
             });
         })
     })();
