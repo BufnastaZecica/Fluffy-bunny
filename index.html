@@ -2,128 +2,209 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sedgwick+Ave+Display&display=swap"
-    rel="stylesheet" />
-
-
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Orbitron:wght@900&family=Rampart+One&display=swap"
-    rel="stylesheet">
-
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fluffy Bunnies</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;900&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script defer data-domain="fofinhos.pt" src="https://plausible.io/js/plausible.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
 
 <body>
-  <main class="hide-native-scrollbar">
-    <section class="main box-layout">
-      <div>
+
+    <header>
         <h1>
-          Fluffy<br />
-          Bunnies
+            Fluffy Bunnies
         </h1>
-        <h2 class="gradient-font">Making pretty websites and <br> Crafting custom software solutions</h2>
-      </div>
-      <div class="walk-bunny-container box-layout">
-        <div class="walking-bunny">
+        <div class="overlay overlay-slide-left" id="overlay">
+            <nav>
+                <ul>
+                    <li id="nav-1" class="slide-out-1 center">
+                        <a href="#home" class="center">Home</a>
+                    </li>
+                    <li id="nav-2" class="slide-out-2 center">
+                        <a href="#about" class="center">About</a>
+                    </li>
+                    <li id="nav-3" class="slide-out-3 center">
+                        <a href="#skills" class="center">Skills</a>
+                    </li>
+                    <li id="nav-4" class="slide-out-4 center">
+                        <a href="#projects" class="center">Projects</a>
+                    </li>
+                    <li id="nav-5" class="slide-out-5 center">
+                        <a href="#contact" class="center">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </section>
-    <section class="services box-layout" id="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Websites</li>
-        <li>Aplications</li>
-        <li>Web Presentations</li>
-      </ul>
-    </section>
-    <section class="projects box-layout" id="projects">
-      <div class="basina">
-        <a href="https://basina.surge.sh/" target="_blanck">
-          <img src="./imgs/basina1.PNG" alt="Websites landing page">
-          <img src="./imgs/basina2.PNG" alt="Websites page">
-        </a>
-      </div>
-      <div class="chartbehavior">
-      <a href="https://chartbehavior.com/app" target="_blanck">
-        <img src="./imgs/cb1.PNG" alt="Websites landing page">
-        <img src="./imgs/cb2.PNG" alt="Websites page">
-      </a>  
-      </div>
-    </section>
+        <!-- HAMBURGER MENU -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-bar1"></div>
+            <div class="menu-bar2"></div>
+            <div class="menu-bar3"></div>
+        </div>
+    </header>
+    <main>
+        <section class="main box-layout">
+            <div>
+                <h2 class="gradient-font">Making pretty websites and <br> Crafting custom software solutions</h2>
+            </div>
+            <div class="mainwrapp">
+                <div class="walk-bunny-container box-layout">
+                    <div class="walking-bunny">
+                    </div>
+                </div>
+                <div>
+                    <div class="call">
+                        <p class="gradient-font">Welcome to<br>our magic land.</p>
+                        <p class="gradient-font">It's nice to meet you!</p>
+                        <div class='wrapper'>
+                            <div role='button' class='retro-btn primary'>
+                                <a class='btn' href="#services">
+                                    <span class='btn-inner'>
+                                  <span class='content-wrapper'>
+                                    <span class='btn-content'>
+                                      <span class='btn-content-inner' label='Learn more'>
+                                      </span>
+                                    </span>
+                                    </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="contact box-layout">
-      <div class="animated-bunnies">
-        <img class="left-bunny" src="./imgs/zeka_desno.png" alt="Blue nose Fluffy bunny" />
-        <img class="right-bunny" src="./imgs/zeka_levo.png" alt="Pink nose Fluffy Bunny" />
-      </div>
-      <h2>
-        Need one? <br> Lets make it!
-      </h2>
-    </section>
-    <section class="contact-form box-layout">
-      <div id="contact">
-        <p>Send us a message</p>
-        <form id="contact-form">
-          <input type="hidden" name="contact_number" />
-          <p>
-            <label>Name</label>
-            <input type="text" name="user_name" required />
-          </p>
-          <p>
-            <label>Email</label>
-            <input type="email" name="user_email" required />
-          </p>
-          <p class="message">
-            <label>Message</label>
-            <textarea name="message" required></textarea>
-          </p>
+        <section class="services box-layout" id="services">
+            <h2>Services</h2>
+            <p>What We Offer</p>
+            <ul>
+                <li>Websites</li>
+                <li>Aplications</li>
+                <li>Web Presentations</li>
+            </ul>
+        </section>
+        <section class="projects box-layout" id="projects">
+            <h2>Portfolio</h2>
+            <p>Recent Projects</p>
+            <div class="projectswrapp">
+                <div class="basina">
+                    <a href="https://basina.surge.sh/" target="_blanck">
+                        <!-- <img src="./imgs/basina.png" alt="Websites landing page"> -->
+                        <p>basina.surge.sh</p>
+                    </a>
+                </div>
+                <div class="chartbehavior">
+                    <a href="https://chartbehavior.com/app" target="_blanck">
+                        <!-- <img src="./imgs/fc.png" alt="Websites landing page"> -->
+                        <P>chartbehavior.com</P>
+                    </a>
+                </div>
+                <div class="matematics">
+                    <a href="https://explicacaomatematicaonline.pt/" target="_blanck">
+                        <!-- <img src="./imgs/matematica.png" alt="Websites landing page"> -->
+                        <P>explicacaomatematicaonline.pt</P>
+                    </a>
+                </div>
+                <div class="janela">
+                    <a href="http://janelavibrante.surge.sh/" target="_blanck">
+                        <!-- <img src="./imgs/matematica.png" alt="Websites landing page"> -->
+                        <P>http://janelavibrante.surge.sh/</P>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about box-layout">
+            <h2>About Us</h2>
+            <div>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p></p>
+            </div>
+            <div>
+                <figure>
+                    <img src="./imgs/sanja.JPG" alt="Photo of Sanja Nesic - team member">
+                    <figcaption>Sanja Nesic<br>Web Developer</figcaption>
+                </figure>
+                <figure>
+                    <img src="./imgs/zeljko.JPG" alt="Photo of Zeljko Nesic - team member">
+                    <figcaption>Zeljko Nesic<br>Softver Developer</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="contact box-layout">
+            <div class="animated-bunnies">
+                <img class="left-bunny" src="./imgs/zeka_desno.png" alt="Blue nose Fluffy bunny" />
+                <img class="right-bunny" src="./imgs/zeka_levo.png" alt="Pink nose Fluffy Bunny" />
+            </div>
+            <h2>
+                Need one? <br> Lets make it!
+            </h2>
+        </section>
+        <section class="contact-form box-layout">
+            <div id="contact">
+                <p>Send us a message</p>
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number" />
+                    <p>
+                        <label>Name</label>
+                        <input type="text" name="user_name" required />
+                    </p>
+                    <p>
+                        <label>Email</label>
+                        <input type="email" name="user_email" required />
+                    </p>
+                    <p class="message">
+                        <label>Message</label>
+                        <textarea name="message" required></textarea>
+                    </p>
 
-          <p>
-            <input type="submit" value="Send" />
-          </p>
-        </form>
-      </div>
-      <div id="responce">
-        <p class="gradient-font ">
-          Thanks for reaching out to us!
-          <br />
-          We wil conntact you back as soon as possible.
-        </p>
-      </div>
-    </section>
-    <section class="contact box-layout">
-      <address>
-        <a href="mailto:fluffybunny@gmail.com">fluffybunny@gmail.com</a><br />
-        <a href="tel:+13115552368">(311) 555-2368</a>
-      </address>
-    </section>
-  </main>
+                    <p>
+                        <input type="submit" value="Send" />
+                    </p>
+                </form>
+            </div>
+            <div id="responce">
+                <p class="gradient-font ">
+                    Thanks for reaching out to us!
+                    <br /> We wil conntact you back as soon as possible.
+                </p>
+            </div>
+        </section>
+        <section class="contact box-layout">
+            <address>
+                <a href="mailto:contact@fofinhos.pt">contact@fofinhos.com</a><br />
+                <a href="tel:+351967866108">(+351) 967 866 108</a>
+            </address>
+        </section>
+    </main>
 
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("user_dXnw0wdAdI0EwpxJtJWnR");
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          emailjs.sendForm("bufna", "bufnat", "contact-form").then(
-            function (response) {
-              document.getElementById("contact").style.display = "none";
-              document.getElementById("responce").style.display = "flex";
-            });
-        })
-    })();
-  </script>
-  <script src="./js/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_dXnw0wdAdI0EwpxJtJWnR");
+            document
+                .getElementById("contact-form")
+                .addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    emailjs.sendForm("bufna", "bufnat", "contact-form").then(
+                        function(response) {
+                            document.getElementById("contact").style.display = "none";
+                            document.getElementById("responce").style.display = "flex";
+                        });
+                })
+        })();
+    </script>
+    <script src="./js/index.js" type="text/javascript"></script>
 </body>
 
 </html>
