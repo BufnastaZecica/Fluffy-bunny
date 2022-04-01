@@ -815,25 +815,33 @@ main .main h2 {
 .contact h2,
 .about h2 {
     font-weight: bolder;
-    font-size: 2.3em;
-    color: var(--tutu);
-    /* background-color: var(--hippleblue); */
+    font-size: 2.5rem;
     width: 100%;
+}
+
+.services h2 {
+    color: var(--tutu);
+}
+
+.about>p {
+    font-size: 2.5rem;
+    margin: -5% 0 12% 0;
+    color: var(--regalblue);
+}
+
+.about h2 {
+    font-size: 1.3rem;
+    color: var(--sundown);
 }
 
 .contact h2 {
     margin-bottom: -10%;
-}
-
-.projects h2,
-.about h2,
-.contact h2 {
-    font-size: 3em;
+    color: var(--tutu);
 }
 
 .about>div:last-child {
     text-align: center;
-    margin-top: 12%;
+    /* margin-top: 12%; */
 }
 
 .services ul {
@@ -874,7 +882,7 @@ main .main h2 {
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6%;
+    margin-bottom: 10%;
 }
 
 .projects .projectswrapp {
@@ -923,58 +931,69 @@ main .main h2 {
 
 .projects a p {
     text-decoration: underline;
-    color: var(--hippleblue);
+    color: var(--regalblue);
     z-index: 1;
-    font-size: 0.7rem;
-    width: 70%;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
     margin: 0;
-    margin-bottom: 2%;
-    padding: 2% 0;
-    background-color: var(--tutu);
+    background-color: #1d35570d;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
+.projects a p span {
+    margin-bottom: -1.5rem;
+}
 
-}
-.projects img {
-    width: 300px;
-    position: relative;
-    right: 0;
-}
 .projects {
     background-color: var(--tutu);
 }
+
 .projects h2 {
     font-size: 1.3rem;
     color: var(--suzukired);
 }
+
 .projects>p {
     font-size: 2.5rem;
     margin: -5% 0 12% 0;
-    columns: var(--regalblue);
+    color: var(--regalblue);
 }
+
 .about>div {
     width: 80%;
     text-align: justify;
     color: var(--sundown);
 }
+
+.about>div p {
+    display: none;
+}
+
 .about>div img {
     max-width: 216px;
     border-radius: 160px;
 }
+
 #contact {
     background-color: transparent;
     color: var(--black);
     border: none;
 }
+
 #contact-form {
     display: flex;
     flex-flow: column;
     align-items: top;
     color: var(--black);
 }
+
 #contact-form label {
     padding-right: 20px;
 }
+
 #contact-form input[type="text"],
 #contact-form input[type="email"] {
     border: none;
@@ -985,38 +1004,46 @@ main .main h2 {
     font-size: 1.2em;
     width: 100%;
 }
+
 .contact-form {
     align-self: center;
     margin-top: 9%;
     margin-bottom: 0;
     width: 86%;
 }
+
 .contact-form div>p {
     text-transform: uppercase;
     padding: 10px 20px;
     margin: 0;
     line-height: 2em;
 }
+
 #contact-form p {
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
 }
+
 #contact-form p label {
     font-size: 21px;
     margin-bottom: -1%;
 }
+
 #contact>p:first-child {
     text-align: center;
     font-size: 29px;
 }
+
 #contact-form p.message {
     display: block;
 }
+
 .message label {
     display: block;
     text-align: left;
 }
+
 #contact-form textarea {
     background-color: transparent;
     border: 1px solid var(--black);
@@ -1028,10 +1055,12 @@ main .main h2 {
     display: block;
     margin-top: 3%;
 }
+
 #contact-form p:last-of-type {
     text-align: right;
     align-self: flex-end;
 }
+
 #contact-form input[type="submit"] {
     color: var(--black);
     background-color: transparent;
@@ -1043,16 +1072,19 @@ main .main h2 {
     text-transform: uppercase;
     border: 2px solid var(--black);
 }
+
 #responce {
     display: none;
     justify-content: center;
     margin-top: 7%;
 }
+
 address {
     width: 78%;
     border-top: 3px solid var(--black);
     padding-top: 5%;
 }
+
 address a {
     text-decoration: none;
     font-style: normal;
@@ -1060,11 +1092,13 @@ address a {
     font-weight: bold;
     line-height: 1.5em;
 }
+
 button {
     background-color: var(--black);
     width: 70%;
     margin-top: 38px;
 }
+
 button a {
     text-decoration: none;
     text-transform: uppercase;
@@ -1073,23 +1107,21 @@ button a {
     line-height: 3em;
     font-family: var(--main-font);
 }
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1025px) {
     header h1 {
         text-align: center;
         font-size: 7.5rem;
         line-height: 7rem;
     }
-    
     main .main h2 {
         font-size: 2.5rem;
     }
-    
     .walking-bunny {
         background: url(../imgs/walk_wscr.png) 0 0px no-repeat;
         width: 700px;
         height: 474px;
     }
-    
     @-moz-keyframes bunnyWalk {
         0% {
             -moz-background-position: 0 0;
@@ -1100,7 +1132,6 @@ button a {
             background-position: 0 -949px;
         }
     }
-    
     @keyframes bunnyWalk {
         0% {
             -moz-background-position: 0 0;
@@ -1111,17 +1142,14 @@ button a {
             background-position: 0 -949px;
         }
     }
-    
     .animated-bunnies .left-bunny,
     .animated-bunniess .left-bunny {
         height: 400px;
     }
-    
     .animated-bunnies .right-bunny,
     .animated-bunniess .right-bunny {
         height: 400px;
     }
-    
     .services h2,
     .contact h2 {
         margin-top: 78px;
@@ -1129,21 +1157,19 @@ button a {
         line-height: 0.8em;
         padding: 3% 0;
     }
-    
     .services ul {
         font-size: 2.3em;
         line-height: 2em;
     }
-    
     address {
         margin: 5% 0 17% 0;
         font-size: 2em;
     }
-    
     .contact-form {
         width: 70%;
     }
 }
+
 @media only screen and (min-width: 1025px) {
     header h1 {
         font-size: 5.5rem;
@@ -1153,7 +1179,6 @@ button a {
         color: var(--big-dip-oruby);
         font-family: 'Rampart One', cursive;
     }
-    
     .hamburger-menu {
         position: fixed;
         top: 3rem;
@@ -1161,7 +1186,6 @@ button a {
         z-index: 10;
         cursor: pointer;
     }
-    
     .menu-bar1,
     .menu-bar2,
     .menu-bar3 {
@@ -1171,39 +1195,33 @@ button a {
         margin: 0.8rem 0;
         transition: 0.4s;
     }
-    
     .menu-bar2 {
         width: 2rem;
         margin-left: auto;
     }
     /* ROTATE FIRST BAR */
-    
     .active .menu-bar1 {
         /* transform: rotate(-45deg) translate(-7px, 8px); */
         transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
     }
     /* FADE OUT SECOND BAR */
-    
     .active .menu-bar2 {
         opacity: 0;
     }
     /* ROTATE LAST BAR */
-    
     .active .menu-bar3 {
         /* transform: rotate(45deg) translate(-6px, -8px); */
         transform: rotate(45deg) translate(-0.6rem, -0.8rem);
     }
-    
     main {
         flex: 3;
         overflow-x: unset;
     }
-    
-    main .main {
+    main section.main {
         width: 100%;
         height: 90vh;
+        padding-top: 0;
     }
-    
     main .main>div.mainwrapp {
         display: flex;
         flex-flow: row-reverse nowrap;
@@ -1213,41 +1231,33 @@ button a {
         width: 80%;
         align-self: center;
     }
-    
     .call p {
         font-size: 2rem;
         line-height: 2.2rem;
         margin: 0.7rem;
     }
-    
     .wrapper {
         margin-top: 13%;
     }
-    
     main .main h1 {
         font-size: 10em;
         margin: 2%;
     }
-    
     main .main h2 {
         font-size: 2rem;
     }
-    
     main .main h2 br {
         display: none;
     }
-    
     .walk-bunny-container {
         margin: 0;
     }
-    
     .walking-bunny {
         background: url(../imgs/walk_wscr.png) 0 0px no-repeat;
         width: 700px;
         height: 474px;
         margin: 0;
     }
-    
     @-moz-keyframes bunnyWalk {
         0% {
             background-position: 0 0;
@@ -1256,7 +1266,6 @@ button a {
             background-position: 0 -949px;
         }
     }
-    
     @keyframes bunnyWalk {
         0% {
             background-position: 0 0;
@@ -1265,7 +1274,6 @@ button a {
             background-position: 0 -949px;
         }
     }
-    
     .box-layout {
         margin: unset;
         padding-top: 3% 0;
@@ -1279,72 +1287,74 @@ button a {
         font-size: 3em;
         line-height: 2.3em;
     } */
-    
     .contact h2>br {
         display: none;
     }
-    
     .services,
     .projects,
     .contact {
         font-size: 1.5em;
         width: 100%;
     }
-    
     .services>p,
-    .projects>p {
+    .projects>p,
+    .about>p {
         margin: -1% 0 5% 0;
         font-size: 3.5rem;
     }
-    
     .projects {
         margin-bottom: unset;
     }
-    
     .projects .projectswrapp {
         flex-flow: row wrap;
+        width: 80%;
     }
-    
     .projects a {
         border: 3px solid var(--tutu);
     }
-    
     .projects .basina,
     .projects .chartbehavior,
     .projects .matematics,
     .projects .janela {
         margin-bottom: unset;
         width: 40%;
-        transition: transform 0.6s ease-in-out;
+        transition: transform 0.4s ease-in-out;
     }
-    
     .projects .basina:hover,
     .projects .chartbehavior:hover,
     .projects .matematics:hover,
     .projects .janela:hover {
-        background-color: var(--suzukired);
-        transform: scale(0.8);
+        transform: scale(0.85);
     }
-    
+    .projects .basina:hover p,
+    .projects .chartbehavior:hover p,
+    .projects .matematics:hover p,
+    .projects .janela:hover p {
+        background-color: #1d3557a8;
+        opacity: 1;
+    }
     .projects a {
         width: 100%;
         height: 308px;
     }
-    
     .projects a p {
-        font-size: 1rem;
-        width: 50%;
+        font-size: 1.5rem;
+        align-items: center;
+        color: var(--tutu);
+        opacity: 0;
+        transition: opacity 0.6s linear, background-color 0.6s linear;
     }
-    
+    .projects a p span {
+        font-size: 1.7rem;
+        font-family: var(--main-font);
+    }
     .about {
         margin-bottom: 5%;
     }
-    
     .about>div {
         width: 60%;
         font-size: 1.5rem;
     }
-    
     .about>div:last-child {
         display: flex;
         flex-flow: row nowrap;
@@ -1352,19 +1362,19 @@ button a {
         align-content: center;
         margin-top: 3%;
     }
-    
     .about div figure {
         margin: 0 10%;
     }
-    
     .contact {
-        margin-bottom: -4%;
+        margin-bottom: 6%;
+        padding: 0;
     }
-    
+    .contact h2 {
+        font-size: 3.5rem;
+    }
     .contact .animated-bunnies {
         display: none;
     }
-    
     .contact-form {
         width: 50%;
     }
